@@ -1,0 +1,61 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fffafc;
+}
+
+h2 {
+  font-weight: bold;
+  color: #b23a48;
+}
+
+.circle-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #f3c4c9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery img {
+  flex-shrink: 0;
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.message-box .card {
+  background-color: #fff0f3;
+  border-left: 5px solid #f27e9c;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+#countdown {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #dc3545;
+  background-color: #ffe6ea;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.navbar.fixed-bottom {
+  background-color: #fff0f3 !important;
+  border-top: 2px solid #f8c6d0;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a.nav-link {
+  color: #b23a48 !important;
+  text-align: center;
+  font-size: 0.9rem;
+}
