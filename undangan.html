@@ -2,9 +2,158 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Detail Undangan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Pernikahan</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="undangan.css" />
+    <style>
+      .nav-circle {
+        text-align: center;
+        font-size: 0.75rem;
+        color: #b23a48 !important;
+        text-decoration: none;
+        width: 60px;
+        height: 60px;
+        background-color: #ffe6ec;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      .nav-circle i {
+        font-size: 1.2rem;
+        margin-bottom: 2px;
+      }
+
+      .nav-circle:hover {
+        background-color: #fdd0dc;
+        transform: scale(1.05);
+      }
+
+      .navbar.fixed-bottom {
+        background-color: #fff0f3 !important;
+        border-top: 2px solid #f8c6d0;
+        box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
   <body>
-    <h1>On Progres</h1>
+    <!-- HOME -->
+    <section id="home" class="text-center py-5 bg-light">
+      <h2 class="mb-3">Hitung Mundur Pernikahan</h2>
+      <p id="countdown" class="fs-4 text-danger"></p>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-5 bg-white text-center">
+      <h2 class="mb-4">Tentang Kami</h2>
+      <div class="container">
+        <div class="row justify-content-center mb-4">
+          <div class="col-6 col-md-4">
+            <img src="1.png" class="circle-img mb-2" alt="Pengantin Pria" />
+            <p class="fw-semibold">Dwik</p>
+          </div>
+          <div class="col-6 col-md-4">
+            <img src="1.png" class="circle-img mb-2" alt="Pengantin Wanita" />
+            <p class="fw-semibold">Natal</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEMPAT -->
+    <section id="tempat" class="py-5 bg-light text-center">
+      <h2 class="mb-3">Tempat Acara</h2>
+      <div class="container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.245427398343!2d115.28361171471822!3d-8.526189693876727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2162af9a721f7%3A0x824e3901cfbdaf52!2sJl.%20Pasung%20Grigis%20I%20No.22%2C%20Kemenuh%2C%20Kec.%20Sukawati%2C%20Kabupaten%20Gianyar%2C%20Bali%2080581!5e0!3m2!1sid!2sid!4v1719310452017!5m2!1sid!2sid"
+          width="100%"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- HISTORY -->
+    <section id="history" class="py-5 bg-white text-center">
+      <h2 class="mb-4">Galeri Kami</h2>
+      <div class="container">
+        <div class="d-flex overflow-auto gap-3 gallery px-2">
+          <img src="1.png" class="rounded shadow" alt="foto1" height="150" />
+          <img src="1.png" class="rounded shadow" alt="foto2" height="150" />
+          <img src="1.png" class="rounded shadow" alt="foto3" height="150" />
+        </div>
+      </div>
+    </section>
+
+    <!-- PESAN -->
+    <section id="pesan" class="py-5 bg-light text-center">
+      <h2 class="mb-4">Ucapan untuk Pengantin</h2>
+      <div class="container">
+        <form id="messageForm" class="mb-4">
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Nama Anda"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <textarea
+              class="form-control"
+              id="message"
+              placeholder="Ucapan Anda"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-danger">Kirim</button>
+        </form>
+        <div id="messageList" class="message-box text-start"></div>
+      </div>
+    </section>
+
+    <!-- NAVIGASI BAWAH -->
+    <nav
+      class="navbar fixed-bottom navbar-light border-top shadow-sm justify-content-around d-md-none py-2"
+    >
+      <a href="#home" class="nav-circle">
+        <i class="bi bi-house-door-fill"></i>
+        <small>Home</small>
+      </a>
+      <a href="#about" class="nav-circle">
+        <i class="bi bi-person-heart"></i>
+        <small>About</small>
+      </a>
+      <a href="#tempat" class="nav-circle">
+        <i class="bi bi-geo-alt-fill"></i>
+        <small>Tempat</small>
+      </a>
+      <a href="#history" class="nav-circle">
+        <i class="bi bi-images"></i>
+        <small>History</small>
+      </a>
+      <a href="#pesan" class="nav-circle">
+        <i class="bi bi-chat-dots-fill"></i>
+        <small>Pesan</small>
+      </a>
+    </nav>
+
+    <script src="script.js"></script>
   </body>
 </html>
